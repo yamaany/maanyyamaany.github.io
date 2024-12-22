@@ -5,31 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon - maanyyamaany.com</title>
     <style>
-        body {
+        /* Reset margin and padding to ensure full page layout */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
         }
-        img {
+
+        /* Full-screen background image */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
             width: 100%;
-            max-width: 600px;
-            margin-bottom: 20px;
+            height: 100%;
+            background-image: url("YOUR_CANVA_IMAGE_URL"); /* Replace with your Canva image URL */
+            background-size: cover; /* Makes the image cover the whole screen */
+            background-position: center center;
+            z-index: -1; /* Keeps the image in the background */
         }
-        a {
-            text-decoration: none;
-            font-size: 18px;
-            color: #0073e6;
+
+        /* Centered text */
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 40px;
+        }
+
+        .content p {
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <h1>Coming Soon!</h1>
-    <p>We’re working on something amazing. Stay tuned!</p>
+    <!-- Full-page background image -->
+    <div class="background"></div>
 
-    <!-- Image from Canva (optional) -->
-    <img src="YOUR_CANVA_IMAGE_URL" alt="Coming Soon Image">
-    
-    <!-- Link to the uploaded PDF -->
-    <p><a href="YOUR_PDF_FILE_URL" target="_blank">Download our PDF</a></p>
+    <!-- Content section -->
+    <div class="content">
+        <h1>Coming Soon!</h1>
+        <p>We’re working on something amazing. Stay tuned!</p>
+    </div>
 </body>
 </html>
